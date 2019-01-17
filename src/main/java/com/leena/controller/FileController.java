@@ -46,7 +46,12 @@ public class FileController {
 			content = new String(Files.readAllBytes(file1.toPath()));
 			
 			System.out.println(content);
-		} 
+		}
+		catch(FileNotFoundException e1)
+		{
+			System.out.println("file not found");
+			e1.printStackTrace();
+		}
 		catch (Exception e) 
 		{
 			e.printStackTrace();
